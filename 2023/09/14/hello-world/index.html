@@ -2,6 +2,17 @@
 <!DOCTYPE html>
 <html lang="cn">
     <head>
+        
+            <script>
+              if (localStorage.getItem('theme') === "dark" ||
+                (!("theme" in localStorage) &&
+                  window.matchMedia("(prefers-color-scheme: dark)").matches)
+              ) {
+                  document.documentElement.classList.add("dark");
+              }
+            </script>
+          
+          
         <meta charset="utf-8" />
         <title>Hello World | Soranoue的博客</title>
         <meta name="author" content="soranoue" />
