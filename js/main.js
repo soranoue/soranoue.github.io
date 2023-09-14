@@ -57,42 +57,6 @@ const app = Vue.createApp({
             }
             this.scrollTop = newScrollTop;
         },
-    },methods: {
-        // 判断系统是否为黑暗模式
-        isSystemDarkMode() {
-            return window.matchMedia("(prefers-color-scheme: dark)").matches;
-        },
-        /**
-         * @param {boolean} dark 
-         */
-        setDarkMode(dark) {
-            if (dark) {
-                document.documentElement.classList.add("dark");
-                document
-                .getElementById("highlight-style-dark")
-                .removeAttribute("disabled");
-            } else {
-                document.documentElement.classList.remove("dark");
-                document
-                .getElementById("highlight-style-dark")
-                .setAttribute("disabled", "");
-            }
-        },
-        // 点击按钮切换主题
-        handleThemeSwitch() {
-            this.theme = ((theme) => {
-                switch (theme) {
-                case "auto": // auto -> light
-                    this.setDarkMode(false);
-                    return "light";
-                case "light": // light -> dark
-                    this.setDarkMode(true)
-                    return "dark";
-                case "dark": // dark -> auto
-                    this.isSystemDarkMode() ? this.setDarkMode(true) : this.setDarkMode(false);
-                    return "auto";
-            }})(this.theme)
-        },
     },
 
 });
