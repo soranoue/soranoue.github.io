@@ -9,29 +9,23 @@
         <meta name="keywords" content="" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
         <link rel="icon" href="/images/avatar.jpg" />
-        <script src="https://cdn.staticfile.org/vue/3.3.4/vue.global.prod.min.js"></script>
-<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.0/css/all.min.css" />
-<link rel="stylesheet" href="/css/fonts.min.css" />
+        <script src="https://static-argvchs.netlify.app/libs/vue/3.3.4/vue.global.prod.min.js"></script>
+<link rel="preconnect" href="https://static-argvchs.netlify.app" crossorigin />
+<link rel="stylesheet" href="https://static-argvchs.netlify.app/libs/font-awesome/6.4.0/css/all.min.css" />
+<link rel="stylesheet" href="https://static-argvchs.netlify.app/css/fonts.min.css" />
 <script> const mixins = {}; </script>
 
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
 
-    <script src="https://cdn.staticfile.org/highlight.js/11.8.0/highlight.min.js"></script>
-    <script src="https://cdn.staticfile.org/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
-    <link
-        rel="stylesheet"
-        href="https://cdn.staticfile.org/highlight.js/11.8.0/styles/github-dark.min.css"
-    />
-    <link 
-        rel="stylesheet"
-        id="highlight-style-dark"
-        disabled
-        href="https://cdn.staticfile.org/highlight.js/11.8.0/styles/.min.css"
-    />
-    <script src="/js/lib/highlight.js"></script>
-    
-    
+<script src="https://static-argvchs.netlify.app/libs/highlight.js/11.8.0/highlight.min.js"></script>
+<script src="https://static-argvchs.netlify.app/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://static-argvchs.netlify.app/libs/highlight.js/11.8.0/styles/github-dark.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
 
 
 <script src="/js/lib/preview.js"></script>
@@ -42,6 +36,7 @@
 
 <script src="/js/lib/home.js"></script>
 
+<script src="https://static-argvchs.netlify.app/libs/animejs/3.2.1/anime.min.js"></script>
 <link rel="stylesheet" href="/css/main.css" />
 
     <meta name="generator" content="Hexo 6.3.0"></head>
@@ -270,6 +265,13 @@
             
         </div>
         <script src="/js/main.js"></script>
+        <script>
+            console.info("Welcome to Argvchs' blog!");
+            if (!window.hasOwnProperty("ontouchstart")) {
+                let html = '<canvas id="fireworks" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: 32767"></canvas><script src="https://static-argvchs.netlify.app/js/fireworks.min.js"><\/script>';
+                document.body.append(document.createRange().createContextualFragment(html));
+            }
+        </script>
         
     </body>
 </html>
