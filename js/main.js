@@ -10,30 +10,11 @@ const app = Vue.createApp({
             renderers: [],
         };
     },
-    data(){
-        return {
-          theme: localStorage.getItem("theme") || "auto",
-        }
-      },
-      
     created() {
         window.addEventListener("load", () => {
             this.loading = false;
         });
     },
-    created() {
-        if (this.theme === 'auto')
-          this.isSystemDarkMode() ? this.setDarkMode(true) : this.setDarkMode(false);
-        else
-          this.theme === "dark" ? this.setDarkMode(true) : this.setDarkMode(false);
-        window.addEventListener("beforeunload", () => {
-          if (this.theme === "auto")
-            localStorage.removeItem("theme");
-          else
-            localStorage.setItem("theme", this.theme)
-        });
-      },
-      
     mounted() {
         window.addEventListener("scroll", this.handleScroll, true);
         this.render();
@@ -58,6 +39,5 @@ const app = Vue.createApp({
             this.scrollTop = newScrollTop;
         },
     },
-
 });
 app.mount("#layout");
